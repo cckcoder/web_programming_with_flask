@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %} 
+  <h1>Register Form</h1>
+  <form action="/register" method="post">
+    <input name="name" placeholder="Name" type="text">
+    <select id="dorm" name="dorm">
+      <option value="Apley Court">Apley Court</option>
+      <option value="Canaday">Canaday</option>
+      <option value="Banana">Banana</option>
+    </select>
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}
+
+<script>
+
+  document.querySelector('form').onsubmit = function() {
+    if (!document.querySelector('input').value) {
+      alert('You must provide your email!')
+      return false;
+    }
+    else if (!document.querySelector('select').value) {
+      alert('You must provide your dorm!')
+      return false;
+    }
+
+    return true;
+  }
+
+</script>

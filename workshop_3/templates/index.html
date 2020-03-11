@@ -1,13 +1,16 @@
 {% extends "layout.html" %}
 
-{% block body %}
+{% block body %} 
   <h1>Register Form</h1>
   <form action="/register" method="post">
     <input name="name" placeholder="Name" type="text">
     <select id="dorm" name="dorm">
       <option value="Apley Court">Apley Court</option>
       <option value="Canaday">Canaday</option>
+      <option value="Banana">Banana</option>
     </select>
     <input type="submit" value="Register">
   </form>
+  <p>or see</p>
+  <a href="/registered">who else is registered</a>
 {% endblock %}
