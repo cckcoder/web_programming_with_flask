@@ -14,16 +14,12 @@ def index():
 def search():
   q = request.args.get("q")
   # Short Hand
-  #results = [word for word in WORDS if word.startswith(q)]
-  #print(results)
-
+  results = [word for word in WORDS if word.startswith(q)]
   # Full condition
-  words = []
-  for word in WORDS:
-    print('here')
-    if word.startswith(q):
-      print(word)
+  #words = []
+  #for word in WORDS:
+    #if word.startswith(q):
+      #print(word)
       #words.append(word)
-  return
+  return render_template("search.html", results=results)
 
-  #return render_template("search.html", results=results)
